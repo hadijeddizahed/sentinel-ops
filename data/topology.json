@@ -1,0 +1,62 @@
+{
+  "services": [
+    {
+      "name": "api-gateway",
+      "team": "Core Platform",
+      "lead": "Sarah Connor",
+      "depends_on": ["auth-service", "payment-service", "order-service"]
+    },
+    {
+      "name": "auth-service",
+      "team": "Security & Identity",
+      "lead": "Bob Chen",
+      "depends_on": ["auth-db", "redis-cache"]
+    },
+    {
+      "name": "payment-service",
+      "team": "Fintech Core",
+      "lead": "Alice Vance",
+      "depends_on": ["payments-db", "kafka-cluster"]
+    },
+    {
+      "name": "order-service",
+      "team": "Commerce Ops",
+      "lead": "David Miller",
+      "depends_on": ["orders-db", "payment-service"]
+    },
+    {
+      "name": "notification-service",
+      "team": "Customer Engagement",
+      "lead": "Carol Danvers",
+      "depends_on": ["kafka-cluster"]
+    }
+  ],
+  "datastores": [
+    {
+      "name": "payments-db",
+      "type": "PostgreSQL Primary",
+      "lead": "Alice Vance"
+    },
+    {
+      "name": "auth-db",
+      "type": "PostgreSQL Primary",
+      "lead": "Bob Chen"
+    },
+    {
+      "name": "orders-db",
+      "type": "Aurora MySQL",
+      "lead": "David Miller"
+    },
+    {
+      "name": "kafka-cluster",
+      "type": "Apache Kafka",
+      "lead": "Infra SRE Team"
+    },
+    {
+      "name": "redis-cache",
+      "type": "Redis Cluster",
+      "lead": "Infra SRE Team"
+    }
+  ]
+}
+

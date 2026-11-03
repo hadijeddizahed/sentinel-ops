@@ -1,0 +1,14 @@
+# Python virtual environments & bytecode
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE configurations
+.idea/
+.vscode/
+
+# Local data & caches
+*.log
+.DS_Store
+chroma_db/

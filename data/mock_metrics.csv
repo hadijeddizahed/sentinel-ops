@@ -1,0 +1,17 @@
+timestamp,service,endpoint,status_code,latency_ms
+2026-11-03T18:00:01Z,payment-service,/v1/charge,200,120
+2026-11-03T18:00:03Z,payment-service,/v1/charge,200,145
+2026-11-03T18:00:05Z,payment-service,/v1/charge,200,110
+2026-11-03T18:00:08Z,payment-service,/v1/charge,500,850
+2026-11-03T18:00:10Z,payment-service,/v1/charge,504,5200
+2026-11-03T18:00:12Z,payment-service,/v1/charge,504,5100
+2026-11-03T18:00:15Z,payment-service,/v1/charge,500,920
+2026-11-03T18:00:18Z,payment-service,/v1/charge,504,5400
+2026-11-03T18:00:20Z,payment-service,/v1/charge,200,180
+2026-11-03T18:00:22Z,payment-service,/v1/charge,504,5350
+2026-11-03T18:00:25Z,payment-service,/v1/charge,500,890
+2026-11-03T18:00:28Z,payment-service,/v1/charge,504,5600
+2026-11-03T18:00:30Z,payment-service,/v1/charge,200,135
+2026-11-03T18:00:33Z,payment-service,/v1/charge,504,5150
+2026-11-03T18:00:35Z,payment-service,/v1/charge,504,5800
+
