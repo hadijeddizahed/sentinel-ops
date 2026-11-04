@@ -1,0 +1,35 @@
+[
+  {
+    "service_name": "payment-service",
+    "severity": "CRITICAL",
+    "error_code": "ERR-DB-POOL",
+    "raw_error_log": "org.postgresql.util.PSQLException: FATAL: remaining connection slots are reserved for non-replication superuser connections. Active: 100/100, Queue: 45 waiting.",
+    "description": "Payment service transactions are timing out after 5000ms. Database connection pool exhausted on primary db-prod-01.",
+    "timestamp": "2026-11-03T18:00:10Z"
+  },
+  {
+    "service_name": "payment-service",
+    "severity": "HIGH",
+    "error_code": "ERR-KAFKA-LAG",
+    "raw_error_log": "KafkaConsumerWarning: [Consumer clientId=payment-consumer-1, groupId=payment-group] Offset commit failed on partition payments.transactions-4. Total lag: 62,450 records.",
+    "description": "Payment event consumer group is experiencing massive consumer lag. Processing latency increased to 18 seconds.",
+    "timestamp": "2026-11-03T18:05:00Z"
+  },
+  {
+    "service_name": "auth-service",
+    "severity": "HIGH",
+    "error_code": "ERR-AUTH-504",
+    "raw_error_log": "HttpClientErrorException: 504 Gateway Timeout from upstream https://identity.auth.internal/oauth/v2/token after 5002ms.",
+    "description": "Users are unable to log in. Upstream identity federation provider is timing out during token exchange.",
+    "timestamp": "2026-11-03T18:10:00Z"
+  },
+  {
+    "service_name": "order-service",
+    "severity": "CRITICAL",
+    "error_code": "ERR-KUBE-137",
+    "raw_error_log": "KubeletEvent: Pod order-service-67b9d79c4f-x8z2w was OOMKilled (Exit Code 137). Memory usage reached 512Mi (100% of cgroup limit).",
+    "description": "Order processing pod crashed with OOMKilled and entered CrashLoopBackOff during flash sale traffic surge.",
+    "timestamp": "2026-11-03T18:15:00Z"
+  }
+]
+
