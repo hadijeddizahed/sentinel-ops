@@ -12,3 +12,5 @@ __pycache__/
 *.log
 .DS_Store
 chroma_db/
+.env
+
